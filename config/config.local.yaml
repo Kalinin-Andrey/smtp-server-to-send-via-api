@@ -1,0 +1,20 @@
+server:
+  smtplisten:  "0.0.0.0:2525"
+
+log:
+  encoding:       "json"
+  outputpaths:
+    - "log/app.log"
+    - "stdout"
+  level:          "debug"
+  initialfields:
+    app:          "app"
+
+emaildefaults:
+  sendername:  "annunciator, please no reply"
+  senderemail: "no-reply-annunciator@email.com"
+
+apiproviders:
+  - sysname:  "unisender"
+    hostname: "api.unisender.com"
+    apikey:   "6az66nqr9ddg13sj5r4435t96jior39y86cpufso"
