@@ -20,7 +20,7 @@ type Configuration struct {
 	}
 	Log           log.Config
 	EmailDefaults EmailDefaults
-	APIProviders  []APIProvider
+	EmailProvider EmailProvider
 }
 
 type EmailDefaults struct {
@@ -28,7 +28,7 @@ type EmailDefaults struct {
 	SenderEmail string
 }
 
-type APIProvider struct {
+type EmailProvider struct {
 	SysName  string
 	HostName string
 	APIKey   string

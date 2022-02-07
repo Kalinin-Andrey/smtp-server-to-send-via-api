@@ -8,13 +8,13 @@ log:
     - "stdout"
   level:          "debug"
   initialfields:
-    app:          "app"
+    app:          "smtp2api"
 
 emaildefaults:
   sendername:  "annunciator, please no reply"
   senderemail: "no-reply-annunciator@email.com"
 
-apiproviders:
+emailprovider:
   - sysname:  "unisender"
     hostname: "api.unisender.com"
     apikey:   "6az66nqr9ddg13sj5r4435t96jior39y86cpufso"

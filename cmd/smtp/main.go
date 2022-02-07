@@ -7,7 +7,7 @@ import (
 	"smtp2api/internal/pkg/config"
 
 	commonApp "smtp2api/internal/app"
-	"smtp2api/internal/app/restapi"
+	"smtp2api/internal/app/smtp"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 	if err != nil {
 		log.Fatalln("Can not load the config")
 	}
-	app := restapi.New(commonApp.New(ctx, *cfg), *cfg)
+	app := smtp.New(commonApp.New(ctx, *cfg), *cfg)
 
 	if err := app.Run(); err != nil {
 		log.Fatalf("Error while application is running: %s", err.Error())
